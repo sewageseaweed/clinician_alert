@@ -14,3 +14,4 @@ Due to the small number of clinicians (6), the service process the clinicians se
     - Send alert when batch finishes processing?
  - If number of clinician increases, we will either have to scale wait time between requests/batches or round robin
  - Process ray casting in parallel?
+ - Improve logging
