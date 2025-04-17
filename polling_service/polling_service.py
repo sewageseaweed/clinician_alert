@@ -24,11 +24,11 @@ async def get_clinician(client_session, limiter, clinician_id):
                 if clinician_status_map[clinician_id]['error']:
                     clinician_status_map[clinician_id]['error'] = False
     except Exception as e:
-        print(f'Request to fetch Clinician {clinician_id} failed: {e}')
+        print(f'Request to fetch Clinician {clinician_id} failed: {repr(e)}')
         #Alert about error when polling
         if not clinician_status_map[clinician_id]['error']:
             sent = await send_email(f'Error Occurred While Polling Clinician {clinician_id}',\
-                f'An error had occurred while polling for Clinician {clinician_id}: {e}')
+                f'An error had occurred while polling for Clinician {clinician_id}: {repr(e)}')
             if sent:
                 clinician_status_map[clinician_id]['error'] = True
         return False
