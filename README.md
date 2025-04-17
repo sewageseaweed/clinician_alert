@@ -12,6 +12,7 @@ Due to the small number of clinicians (6), the service process the clinicians se
 - This program was develop using Python 3.12
 
 ### How To Run The Program:
+- Populate .env file with the API URL, as well as your email credentials, and what email you are sending the alerts to.
 - Change directories until youre in the root directory of the project. You can paste the following in your terminal:
 
     ```cd ~/clinician_alert/```
